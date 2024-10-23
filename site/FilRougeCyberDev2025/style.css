@@ -1,189 +1,71 @@
-/* couleurs */
-.color2 {
-  background-color: #2c5e8f;
+/* variables */
+:root{
+  --mainColor1: #2c5e8f;
+  --mainColor2: #4282C0;
+  --mainColor3: #f6ea56;
+  --fontColor1: black;
+  --fontColor2: whitesmoke;
+  --search: green;
+  --filter1: rgb(212, 158, 158);
+  --filter2: #90b1d3;
+  --filter3: rgb(148, 202, 148);
+  --darkColor1: rgb(17, 17, 17);
+  --darkColor2: #79cc95;
 }
-.fontColor1 {
-  color: whitesmoke;
-}
-/* dark mode */
+/* darkMod */
 .darkMod1{
-  background-color: black;
-  color: #79cc95;
+  background-color: var(--darkColor1);
+  color: var(--darkColor2);
+  &:hover{
+    text-shadow: 10px var(--fontColor2);
+    color: var(--darkColor2);
+  }
 }
 .darkMod2{
-  background-color: black;
-  border: 1px solid #79cc95;
-  box-shadow: 2px 2px 5px #79cc95;
-  color: #79cc95;
+  background-color: var(--darkColor1);
+  border: 3px var(--darkColor2) solid;
+  box-shadow: var(--fontColor2) 1px 0 10px;
+  color: var(--darkColor2);
 }
 .darkMod3{
-  color: #79cc95;
-  background-color: black;
-  border: 1px solid #79cc95;
-  box-shadow: 2px 2px 5px #79cc95;
-  border-radius: 35px;
-  padding: 1px 20px 5px 20px;
-  margin-right: 10px;
-  font-size: 2em;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  text-align: center;
+  background-color: var(--darkColor1);
+  border: 3px var(--darkColor2) solid;
+  box-shadow: var(--fontColor2) 1px 0 10px;
+  color: var(--darkColor2);
   &:hover{
-    color: #79cc95;
-    text-shadow: whitesmoke 1px 0 10px;
-    transform: scale(1.1);
+    color: var(--darkColor2);
+    text-shadow:var(--fontColor2) 1px 0 10px;
   }
 }
 .darkMod4{
-  background-color: #79cc95;
-}
-.darkMod5{
-  color: #79cc95;
+  background-color: var(--darkColor1);
+  color: var(--darkColor2);
   &:hover{
-    color: #79cc95;
-    text-shadow: whitesmoke 1px 0 10px;
+    color: var(--darkColor2);
+    text-shadow:var(--fontColor2) 1px 0 10px;
   }
 }
-.darkMod6{
-  align-self: center;
-  box-shadow: 6px 6px 10px whitesmoke;
-  color: #79cc95;
-  background-color: black;
-  border: 1px solid #79cc95;
-  box-shadow: 2px 2px 5px #79cc95;
-  border-radius: 35px;
-  padding: 1px 20px 5px 20px;
-  margin-right: 10px;
-  font-size: 2em;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  text-align: center;
-  &:hover{
-    color: #79cc95;
-    text-shadow: whitesmoke 1px 0 10px;
-    transform: scale(1.1);
-  }
+
+.darkMod5:hover{
+  box-shadow:var(--fontColor2) 1px 0 10px;
+  transform: scale(1.1);
 }
-.searchDark{
-  background-color: #79cc95;
-  color: black;
-}
-.filter1Dark{
-  color: black;
-  background-color: #79cc95;
-  border-radius: 30px;
-  margin-right: 10px;
-  &:hover{
-    color: black;
-    transform: scale(1.1);
-  }
-}
-.filter2Dark{
-  color: black;
-  background-color: #79cc95;
-  border-radius: 30px;
-  margin-right: 10px;
-  &:hover{
-    color: black;
-    transform: scale(1.1);
-  }
-}
-.filter3Dark{
-  color: black;
-  background-color: #79cc95;
-  border-radius: 30px;
-  &:hover{
-    color: black;
-    transform: scale(1.1);
-  }
-}
-/* interectivité */
-.interaction{
-  color: black;
-  background-color: #f6ea56;
-  border: 1px solid black;
-  border-radius: 35px;
-  padding: 1px 20px 5px 20px;
-  margin-right: 10px;
-  font-size: 2em;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  text-align: center;
-  &:hover{
-    color: black;
-    transform: scale(1.1);
-  }
-}
-.interaction1{
-  color: black;
-  background-color: #f6ea56;
-  border: 1px solid black;
-  border-radius: 35px;
-  padding: 1px 20px 5px 20px;
-  margin-right: 10px;
-  font-size: 2em;
-  font-family: Arial, Helvetica, sans-serif;
-  text-decoration: none;
-  text-align: center;
-  align-self: center;
-  box-shadow: 6px 6px 10px black;
-  &:hover{
-    color: black;
-    transform: scale(1.1);
-  }
-}
-.interaction2{
-  color: whitesmoke;
-  &:hover{
-    color: black;
-    transform: scale(1.1);
-  }
-}
-.filter1{
-  color: black;
-  background-color: rgb(212, 158, 158);
-  border-radius: 30px;
-  box-shadow: 6px 6px 10px rgb(48, 48, 48);
-  margin-right: 10px;
-  &:hover{
-    color: black;
-    transform: scale(1.1);
-  }
-}
-.filter2{
-  color: black;
-  background-color: #90b1d3;
-  border-radius: 30px;
-  box-shadow: 6px 6px 10px rgb(48, 48, 48);
-  margin-right: 10px;
-  &:hover{
-    color: black;
-    transform: scale(1.1);
-  }
-}
-.filter3{
-  color: black;
-  background-color: rgb(148, 202, 148);
-  border-radius: 30px;
-  box-shadow: 6px 6px 10px rgb(48, 48, 48);
-  &:hover{
-    color: black;
-    transform: scale(1.1);
-  }
-}
-/* header */
+
+
+
 body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: #4282C0;
-
+  background-color: var(--mainColor2);
 }
+
+/* header */
 header{
-  background-color: #2c5e8f;
+  background-color: var(--mainColor1);
   span{
     margin: 10px;
-    color: whitesmoke;
+    color: var(--fontColor2);
   }
   div{
     display: flex;
@@ -195,53 +77,132 @@ header{
       height: 200px;
       width: 200px;
     }
+    a{
+      color: var(--fontColor1);
+      background-color: var(--mainColor3);
+      border: 1px solid var(--fontColor1);
+      border-radius: 35px;
+      padding: 1px 20px 5px 20px;
+      margin-right: 10px;
+      font-size: 2em;
+      font-family: Arial, Helvetica, sans-serif;
+      text-decoration: none;
+      text-align: center;
+      align-self: center;
+      box-shadow: 6px 6px 10px var(--fontColor1);
+      &:hover{
+        color: var(--fontColor1);
+        transform: scale(1.1);
+      }
+    }
   }
   nav{
     a{
       text-decoration: none;
       margin-left: 10px;
+      color: var(--fontColor2);
+      &:hover{
+        color: var(--fontColor1);
+      }
     }
   }
 }
-/* footer */
-footer{
-  nav{
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
+
+  /* footer */
+  footer{
+    background-color: var(--mainColor1);
+    nav{
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+      a{
+        color: var(--fontColor2);
+        &:hover{
+          color: var(--fontColor1);
+          transform: scale(1.1);
+        }
+      }
+    }
   }
-}
-/* bouton et lien */
-.search{
-  background-color: green;
-  color: whitesmoke;
-}
-/* contenu main */
-main{
+
+  /* navigation */
+main{ 
   padding-bottom: 12%;
   nav{
     padding-bottom: 8px;
     display: flex;
     justify-content: center;
-  }
-  section{
-    article:nth-child(1){
-      margin-left: 20%;
-      margin-right: 20%;
-      margin-bottom: 2%;
-      margin-top: 5%;
-      padding: 20px;
-      border-radius: 30px;
-      text-align: center;
-    }
-    article:nth-child(2){
-      margin-left: 20%;
-      margin-right: 20%;
-      text-align: center;
-      div::nth-child(1){
-        margin-top: 10px;
-        margin-bottom: 10px;
+    a{
+      color: var(--fontColor1);
+        background-color: var(--mainColor3);
+        border: 1px solid var(--fontColor1);
+        border-radius: 35px;
+        padding: 1px 20px 5px 20px;
+        margin-right: 10px;
+        font-size: 2em;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        text-align: center;
+        &:hover{
+          color: var(--fontColor1);
+          transform: scale(1.1);
+        }
       }
+  }
+}
+
+/* buttons */
+article:nth-of-type(2) form{
+  display: flex;
+  button{
+    background-color: var(--search);
+    color: var(--fontColor2);
+  }
+}
+article:nth-of-type(2) div button{
+  color: var(--fontColor1);
+    border-radius: 30px;
+    box-shadow: 6px 6px 10px var(--fontColor1);
+    margin-right: 10px;
+    &:hover{
+      color: var(--fontColor1);
+      transform: scale(1.1);
+    }
+}
+article:nth-of-type(2) div ul{
+  background-color: var(--mainColor1);
+}
+article:nth-of-type(2) div:nth-of-type(2) div:first-of-type button{
+  background-color: var(--filter1);
+  margin-right: 10px;
+}
+article:nth-of-type(2) div:nth-of-type(2) div:nth-of-type(2) button{
+  background-color: var(--filter2);
+  margin-right: 10px;
+}
+article:nth-of-type(2) div:nth-of-type(2) div:last-of-type button{
+  background-color: var(--filter3);
+}
+
+/* main content */
+main section{
+  article:nth-child(1){
+    color: var(--fontColor2);
+    background-color: var(--mainColor1);
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 2%;
+    margin-top: 5%;
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+  }
+  article:nth-child(2){
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: center;
+    div:first-of-type h3{
+      color: var(--fontColor2);
     }
   }
 }
@@ -259,30 +220,28 @@ main{
     }
 
   }
-  .filtersButtons{
+  article:nth-of-type(2) div{
     display: flex;
     flex-direction: column;
-    margin-right: 50%;
+    margin-right: 25%;
   }
-  .filter1{
+  article:nth-of-type(2) div:nth-of-type(2) div:first-of-type button{
     border-radius: 20px;
     margin-bottom: 5px;
     margin-right: 0px;
+    padding: 5px;
   }
-  .filter2{
+  article:nth-of-type(2) div:nth-of-type(2) div:nth-of-type(2) button{
     border-radius: 20px;
     margin-bottom: 5px;
     margin-right: 0px;
+    padding: 5px;
   }
-  .filter1Dark{
-    border-radius: 20px;
-    margin-bottom: 5px;
-    margin-right: 0px;
-  }
-  .filter2Dark{
-    border-radius: 20px;
-    margin-bottom: 5px;
-    margin-right: 0px;
+  main nav a{
+    font-size: x-large;
+    padding: 20px 10px 20px 10px;
+    border-radius: 40px;
+    margin-left: -20px;
   }
 }
 @media only screen and (max-width: 560px){
@@ -291,7 +250,7 @@ main{
     width: 100px;
   }
   main{
-    grid-template-columns: 22% 80%;
+    grid-template-columns: 40% 60%;
     margin-bottom: 22%;
     nav{
       margin-left: -10px;
@@ -311,27 +270,24 @@ main{
     margin-left: 2%;
     margin-right: 2%;
   }
-  .smallIntro{
-    font-size: small;
+  article:nth-of-type(2) div{
+    margin-right: 20%;
   }
-  .interaction{
+  section article:first-of-type {
+    font-size: small;
+    h1{
+      font-size: medium;
+    }
+  }
+  header div a{
     font-size: small;
     padding: 5px 10px 5px 10px;
     border-radius: 15px;
   }
-  .interaction1{
-    font-size: small;
-    padding: 5px 10px 5px 10px;
-    border-radius: 15px;
-  }
-  .darkMod3{
-    font-size: small;
-    padding: 5px 10px 5px 10px;
-    border-radius: 15px;
-  }
-  .darkMod6{
-    font-size: small;
-    padding: 5px 10px 5px 10px;
-    border-radius: 15px;
+  main nav a{
+    font-size: medium;
+    padding: 20px 10px 20px 10px;
+    border-radius: 40px;
+    margin-left: -20px;
   }
 }

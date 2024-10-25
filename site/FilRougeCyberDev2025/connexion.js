@@ -1,55 +1,42 @@
-// éléments à transformer
-const body = document.querySelector('body');
-console.log(body);
-// header
-const header = document.querySelector('header');
-console.log(header);
-const checkbox = document.querySelector('span');
-console.log(checkbox);
-const logo = document.querySelector('img');
-console.log(logo);
-const connexion = header.querySelector("div").querySelector("a");
-console.log(connexion);
-const breadCrumb = header.querySelector('nav').querySelectorAll('a');
-console.log(breadCrumb);
-// footer
-const footer = document.querySelector('footer');
-console.log(footer);
-const links = footer.querySelectorAll("a");
-console.log(links);
-// contenu page
-
-
-
 // darkmod
-let darkMod = document.querySelector('input');
-console.log(darkMod);
-darkMod.addEventListener('click',()=>{
-    if(darkMod.checked){
-        logo.src = './design/darkModeLogo.png';
-        body.classList.toggle('darkMod1');
-        header.classList.toggle('darkMod2');
-        checkbox.classList.toggle('darkMod4');
-        connexion.classList.toggle('darkMod3');
-        breadCrumb.forEach(element => {
-                element.classList.toggle('darkMod4')
-        });      
-        footer.classList.toggle('darkMod2');
-        links.forEach(element => {
-                element.classList.toggle('darkMod4')
-        });
-    } else{
-        logo.src = './design/logo.png';
-        body.classList.toggle('darkMod1');
-        header.classList.toggle('darkMod2');
-        checkbox.classList.toggle('darkMod4');
-        connexion.classList.toggle('darkMod3');
-        breadCrumb.forEach(element => {
-                element.classList.toggle('darkMod4')
-        });      
-        footer.classList.toggle('darkMod2');
-        links.forEach(element => {
-                element.classList.toggle('darkMod4')
-        });
-    }
-});
+const imglogo = document.querySelector('header').querySelector('div').querySelectorAll('img');
+console.log(imglogo);
+const logo = imglogo[1];
+console.log(logo);
+const darkModIcon = imglogo[0];
+console.log(darkModIcon);
+
+function DarkModToggle(){
+        document.body.classList.toggle('darkMode');
+        if (document.body.classList.contains('darkMode')) {
+                localStorage.setItem('darkmode', 'enabled');
+                logo.src='./design/darkModeLogo.png';
+                darkModIcon.src='./design/light.png'
+                localStorage.setItem('themeIcon', 'soleil');
+        } else {
+                localStorage.setItem('darkmode', 'disabled');
+                logo.src = './design/logo.png';
+                darkModIcon.src = './design/dark.png'
+                localStorage.setItem('themeIcon', 'lune');
+        }
+}
+function DarkModeMemory(){
+        const darkModeStatus = localStorage.getItem('darkmode');
+        console.log(darkModeStatus);
+        const themeIcon = localStorage.getItem('themeIcon');
+        console.log(themeIcon);
+        if (darkModeStatus ==='enabled') {
+                document.body.classList.add('darkMode');
+                logo.src = './design/darkModeLogo.png';
+                darkModIcon.src = './design/light.png'
+        }
+        if (themeIcon ==='soleil') {
+                logo.src = './design/darkModeLogo.png';
+                darkModIcon.src = './design/light.png';
+        } else {
+                logo.src = './design/logo.png';
+                darkModIcon.src = './design/dark.png'
+        }
+}
+document.addEventListener('DOMContentLoaded', DarkModeMemory);
+darkModIcon.addEventListener('click', DarkModToggle);

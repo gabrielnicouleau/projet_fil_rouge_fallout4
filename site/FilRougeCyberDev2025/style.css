@@ -13,45 +13,90 @@
   --darkColor2: #79cc95;
 }
 /* darkMod */
-.darkMod1{
+.darkMode{
   background-color: var(--darkColor1);
-  color: var(--darkColor2);
-  &:hover{
-    text-shadow: 10px var(--fontColor2);
+  header{
+    background-color: var(--darkColor1);
+    border: 3px var(--darkColor2) solid;
+    box-shadow: var(--fontColor2) 1px 0 10px;
+    color: var(--darkColor2);
+    div a{
+      background-color: var(--darkColor2);
+      box-shadow: var(--fontColor2) 1px 0 10px;
+      color: var(--darkColor1);
+      border: 1px var(--darkColor2) solid;
+      &:hover{
+        background-color: var(--darkColor1);
+        color: var(--darkColor2);
+      }
+    }
+    nav a{
+      background-color: var(--darkColor1);
+      color: var(--darkColor2);
+      &:hover{
+        color: var(--darkColor2);
+        text-shadow:var(--fontColor2) 1px 0 10px;
+      }
+    }
+  }
+  main nav a{
+    background-color: var(--darkColor2);
+    box-shadow: var(--fontColor2) 1px 0 10px;
+    color: var(--darkColor1);
+    border: 1px var(--darkColor2) solid;
+    &:hover{
+      background-color: var(--darkColor1);
+      color: var(--darkColor2);
+    }
+  }
+  footer {
+    background-color: var(--darkColor1);
+    border: 3px var(--darkColor2) solid;
+    box-shadow: var(--fontColor2) 1px 0 10px;
+    nav a{
+      background-color: var(--darkColor1);
+      color: var(--darkColor2);
+      &:hover{
+        color: var(--darkColor2);
+        text-shadow:var(--fontColor2) 1px 0 10px;
+      }
+    }
+  }
+
+/* contenu de page */
+  main section article:first-child{
+    background-color: var(--darkColor1);
+    color: var(--darkColor2);
+    border: 3px var(--darkColor2) solid;
+    box-shadow: var(--fontColor2) 1px 0 10px;
+    &:hover{
+      text-shadow: var(--fontColor2) 1px 0 10px;
+    }
+  }
+  main section article:nth-of-type(2) form button{
+    background-color: var(--darkColor2);
+    &:hover{
+      box-shadow: var(--fontColor2) 1px 0 10px;
+    }
+  }
+  main section article:nth-of-type(2) div:nth-of-type(1) h3{
     color: var(--darkColor2);
   }
-}
-.darkMod2{
-  background-color: var(--darkColor1);
-  border: 3px var(--darkColor2) solid;
-  box-shadow: var(--fontColor2) 1px 0 10px;
-  color: var(--darkColor2);
-}
-.darkMod3{
-  background-color: var(--darkColor1);
-  border: 3px var(--darkColor2) solid;
-  box-shadow: var(--fontColor2) 1px 0 10px;
-  color: var(--darkColor2);
-  &:hover{
-    color: var(--darkColor2);
-    text-shadow:var(--fontColor2) 1px 0 10px;
+  main section article:nth-of-type(2) div:nth-of-type(2){
+    button{
+      background-color: var(--darkColor2);
+      box-shadow: var(--fontColor2) 1px 0 10px;
+      &:hover{
+        background-color: var(--darkColor1);
+        border: 1px solid var(--darkColor2);
+        color: var(--darkColor2);
+      }
+    }
+    ul{
+      background-color: var(--darkColor2);
+    }
   }
 }
-.darkMod4{
-  background-color: var(--darkColor1);
-  color: var(--darkColor2);
-  &:hover{
-    color: var(--darkColor2);
-    text-shadow:var(--fontColor2) 1px 0 10px;
-  }
-}
-
-.darkMod5:hover{
-  box-shadow:var(--fontColor2) 1px 0 10px;
-  transform: scale(1.1);
-}
-
-
 
 body {
   display: flex;
@@ -63,17 +108,17 @@ body {
 /* header */
 header{
   background-color: var(--mainColor1);
-  span{
-    margin: 10px;
-    color: var(--fontColor2);
-  }
   div{
     display: flex;
     justify-content: space-between;
     padding: 5px;
     padding-right: 20px;
     padding-left: 20px;
-    img{
+    img:first-of-type{
+      align-self: flex-start;
+      margin-top: 10px;
+    }
+    img:nth-of-type(2){
       height: 200px;
       width: 200px;
     }
@@ -245,7 +290,7 @@ main section{
   }
 }
 @media only screen and (max-width: 560px){
-  body header img{
+  body header img:nth-of-type(2){
     height: 100px;
     width: 100px;
   }

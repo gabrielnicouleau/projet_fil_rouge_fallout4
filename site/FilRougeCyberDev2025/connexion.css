@@ -4,10 +4,6 @@
     --mainColor3: #f6ea56;
     --fontColor1: black;
     --fontColor2: whitesmoke;
-    --search: green;
-    --filter1: rgb(212, 158, 158);
-    --filter2: #90b1d3;
-    --filter3: rgb(148, 202, 148);
     --darkColor1: rgb(17, 17, 17);
     --darkColor2: #79cc95;
 }
@@ -36,16 +32,6 @@ background-color: var(--darkColor1);
             color: var(--darkColor2);
             text-shadow:var(--fontColor2) 1px 0 10px;
             }
-        }
-    }
-    main nav a{
-        background-color: var(--darkColor2);
-        box-shadow: var(--fontColor2) 1px 0 10px;
-        color: var(--darkColor1);
-        border: 1px var(--darkColor2) solid;
-            &:hover{
-            background-color: var(--darkColor1);
-            color: var(--darkColor2);
         }
     }
     footer {
@@ -142,86 +128,15 @@ footer{
 
 
 /* responsive */
-@media only screen and (max-width: 800px){
-main{
-    display: grid;
-    grid-template-columns: 30% 80%;
-    nav{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-left: -20px;
-    }
-
-}
-article:nth-of-type(2) div{
-    display: flex;
-    flex-direction: column;
-    margin-right: 25%;
-}
-article:nth-of-type(2) div:nth-of-type(2) div:first-of-type button{
-    border-radius: 20px;
-    margin-bottom: 5px;
-    margin-right: 0px;
-    padding: 5px;
-}
-article:nth-of-type(2) div:nth-of-type(2) div:nth-of-type(2) button{
-    border-radius: 20px;
-    margin-bottom: 5px;
-    margin-right: 0px;
-    padding: 5px;
-}
-main nav a{
-    font-size: x-large;
-    padding: 20px 10px 20px 10px;
-    border-radius: 40px;
-    margin-left: -20px;
-}
-}
+@media only screen and (max-width: 800px){}
 @media only screen and (max-width: 560px){
 body header img:nth-of-type(2){
     height: 100px;
     width: 100px;
 }
-main{
-    grid-template-columns: 40% 60%;
-    margin-bottom: 22%;
-    nav{
-    margin-left: -10px;
-    }
-}
-main section article:nth-child(1){
-    margin:0;
-    padding: 0;
-}
-main section article:nth-child(1) {
-    margin-right: 5%;
-    margin-bottom: 2%;
-    margin-top: 5%;
-    padding: 10px;
-}
-main section article:nth-child(2){
-    margin-left: 2%;
-    margin-right: 2%;
-}
-article:nth-of-type(2) div{
-    margin-right: 20%;
-}
-section article:first-of-type {
-    font-size: small;
-    h1{
-    font-size: medium;
-    }
-}
 header div a{
     font-size: small;
     padding: 5px 10px 5px 10px;
     border-radius: 15px;
-}
-main nav a{
-    font-size: medium;
-    padding: 20px 10px 20px 10px;
-    border-radius: 40px;
-    margin-left: -20px;
 }
 }

@@ -1,0 +1,10 @@
+mcd/mld/diagramme de classe
+présenter le use case avant l'arborescence.
+intégrer le style tile avec les code couleur hexadécimale utilisées.
+expliquer un peu plus les notions de sécurité
+prioriser la version mobile
+logo outis et techno utilisées
+zoning trop détaillé
+montrer code du responsive
+ne montrer qu'un getter et setter
+explique ce qu'on utilise (ex ob start)

@@ -8,3 +8,4 @@ zoning trop détaillé
 montrer code du responsive
 ne montrer qu'un getter et setter
 explique ce qu'on utilise (ex ob start)
++ regarder le retour d'évaluation d'oral et rajouter les parties qui ne sont pas évaluées

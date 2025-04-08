@@ -4,11 +4,13 @@ class ModelUser{
     private ?string $pseudo;
     private ?string $email;
     private ?string $password;
+    private ?int $id_roles;
     private ?PDO $bdd;
 
     //Constructeur
     public function __construct(){
         $this->bdd = connect();
+        $this->id_roles = 2; //Utilisateur par défaut
     }
     //Getter et Setter
     public function getId(): ?int {
@@ -37,6 +39,14 @@ class ModelUser{
     }
     public function setPassword(?string $password): self {
         $this->password = $password;
+        return $this;
+    }
+    public function getIdRoles(): ?int {
+        return $this->id_roles;
+    }
+    
+    public function setIdRoles(?int $id_roles): self {
+        $this->id_roles = $id_roles;
         return $this;
     }
     public function getBdd(): ?PDO {

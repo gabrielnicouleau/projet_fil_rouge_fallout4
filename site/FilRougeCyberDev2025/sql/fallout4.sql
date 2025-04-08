@@ -1,9 +1,19 @@
 CREATE DATABASE IF NOT EXISTS fallout4;
 USE fallout4;
 
+CREATE TABLE IF NOT EXISTS roles(
+    id_roles INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    nom_role VARCHAR(50) NOT NULL  
+)ENGINE=InnoDB CHARSET=utf8mb4;
+
+INSERT INTO roles ( id_roles, nom_role) 
+VALUES ('1','admin'),('2','utilisateur');
+
 CREATE TABLE IF NOT EXISTS users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     pseudo VARCHAR(50) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    mdp VARCHAR(255) NOT NULL
-);
+    mdp VARCHAR(255) NOT NULL,
+    id_roles INT NOT NULL,
+    FOREIGN KEY (id_roles) REFERENCES roles(id_roles)
+)ENGINE=InnoDB CHARSET=utf8mb4;

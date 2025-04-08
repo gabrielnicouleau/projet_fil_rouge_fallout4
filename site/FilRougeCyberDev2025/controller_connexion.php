@@ -1,5 +1,9 @@
 <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 session_start();
 
 include './App/utils/functions.php';
@@ -52,6 +56,8 @@ class ControllerConnexion{
                             $_SESSION['id'] = $data[0]['id'];
                             $_SESSION['pseudo'] = $data[0]['pseudo'];
                             $_SESSION['email'] = $data[0]['email'];
+                            $_SESSION['id_roles'] = $data[0]['id_roles'];
+                            $_SESSION['nom_role'] = $data[0]['nom_role'];
                             
                             header('Location:./index.php');
                             exit;
@@ -85,6 +91,7 @@ class ControllerConnexion{
                                     $password = password_hash($password, PASSWORD_BCRYPT);
 
                                     $this->getModelUser()->setPseudo($pseudo)->setEmail($email)->setPassword($password);
+                                    // Le rôle est déjà défini par défaut à 2 dans le constructeur de ModelUser
 
                                     $data = $this->getModelUser()->readUserByMail();
 

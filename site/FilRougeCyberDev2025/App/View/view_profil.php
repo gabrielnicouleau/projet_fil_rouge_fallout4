@@ -40,33 +40,32 @@ class ViewProfil{
     public function render(){
         ob_start();
 ?>
-                    <main>
-                        <section id="profil">
-                            <h3>Profil:</h3>
-                        <div>
-                            <h4 id="pseudoProfil">Pseudo: <?php echo $this->getPseudo()?></h4>
-                        </div>
-                        <div>
-                            <h4 id="emailProfil">Email: <?php echo $this->getEmail()?></h4>
-                        </div>
-                        </section>
-                    </main>
+        <main>
+            <section id="profil" aria-labelledby="profil-title">
+                <h3 id="profil-title">Profil:</h3>
+            <div>
+                <h4 id="pseudoProfil">Pseudo: <?php echo $this->getPseudo()?></h4>
+            </div>
+            <div>
+                <h4 id="emailProfil">Email: <?php echo $this->getEmail()?></h4>
+            </div>
+            </section>
+        </main>
+        <footer>
+            <nav aria-label="Liens utiles">
+                <a href="#" aria-label="Mentions légales">Mentions légales</a>
+                <a href="#" aria-label="Informations copyright">copyrights</a>
+                <a href="#" aria-label="Autres liens utiles">liens utiles</a>
+            </nav>
+        </footer>
 
-                    <footer>
-                <nav>
-                    <a href="#">contact</a>
-                    <a href="#">copyrights</a>
-                    <a href="#">liens utiles</a>
-                </nav>
-                </footer>
-                
-                <div id="app"></div>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-                <script type="module" src="./App/src/script/script.js"></script>
-            </body>
+        <div id="app"></div>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+            <script type="module" src="./App/src/script/script.js"></script>
+    </body>
 
-            </html>
-        <?php
+</html>
+<?php
         return ob_get_clean();
     }
 }

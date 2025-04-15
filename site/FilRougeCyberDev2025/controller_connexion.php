@@ -52,12 +52,12 @@ class ControllerConnexion{
                     $data = $this->getModelUser()->readUserByMail();
 
                     if(!empty($data)){
-                        if(password_verify($password,$data[0]['mdp'])){
-                            $_SESSION['id'] = $data[0]['id'];
-                            $_SESSION['pseudo'] = $data[0]['pseudo'];
-                            $_SESSION['email'] = $data[0]['email'];
-                            $_SESSION['id_roles'] = $data[0]['id_roles'];
-                            $_SESSION['nom_role'] = $data[0]['nom_role'];
+                        if(password_verify($password,$data['mdp'])){
+                            $_SESSION['id'] = $data['id'];
+                            $_SESSION['pseudo'] = $data['pseudo'];
+                            $_SESSION['email'] = $data['email'];
+                            $_SESSION['id_roles'] = $data['id_roles'];
+                            $_SESSION['nom_role'] = $data['nom_role'];
                             
                             header('Location:./index.php');
                             exit;

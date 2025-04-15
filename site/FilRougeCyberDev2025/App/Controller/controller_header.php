@@ -1,5 +1,4 @@
 <?php
-include './view/header.php';
 // affichage du lien vers la page de connexion par défault
 $header = new ViewHeader("<a href='controller_connexion.php'>Connexion</a>");
 

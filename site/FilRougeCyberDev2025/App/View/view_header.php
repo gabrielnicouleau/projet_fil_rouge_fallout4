@@ -7,7 +7,10 @@ class ViewHeader{
     public function getNav(): ?string{
         return $this->nav;
     }
-    public function setNav(?string $nav): ViewHeader{ $this->nav = $nav; return $this;}
+    public function setNav(?string $nav): ViewHeader{ 
+        $this->nav = $nav; 
+        return $this;
+    }
     public function render(): string{
         ob_start();
 ?>
@@ -25,7 +28,7 @@ class ViewHeader{
 
 <body>
 
-<header>
+    <header>
     <div>
         <img src="./App/src/images/dark.webp" width="77px" height="40px" alt="Icône mode sombre">
         <img src="./App/src/images/logo.webp" id="logo" alt="Logo Fallout4 trouve mon item">
@@ -34,7 +37,7 @@ class ViewHeader{
     <nav aria-label="fil d'Ariane">
         <a href="./index.php">Accueil ></a>
     </nav>
-</header>
+    </header>
 
 <?php
         return ob_get_clean();

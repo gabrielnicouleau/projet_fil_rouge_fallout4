@@ -25,19 +25,4 @@ function connect(){
     }
 };
 
-// // Fonction améliorée de validation d'email
-// function validateEmail($email) {
-//     return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
-// }
-
-// // Fonction pour vérifier la sécurité d'un mot de passe
-// function isPasswordSecure($password) {
-//     // Minimum 8 caractères, au moins une lettre et un chiffre
-//     $length = strlen($password) >= 8;
-//     $hasLetter = preg_match('/[a-zA-Z]/', $password);
-//     $hasNumber = preg_match('/\d/', $password);
-    
-//     return $length && $hasLetter && $hasNumber;
-// }
-
 ?>

@@ -4,10 +4,10 @@ class ManagerUser extends ModelUser{
     public function readUsers():array | string{
         try{
             $req = $this->getBdd()->prepare('SELECT u.id, u.pseudo, u.email, u.mdp, r.nom_role 
-                                           FROM users u 
-                                           JOIN roles r ON u.id_roles = r.id_roles');
+                                                    FROM users u 
+                                                    JOIN roles r ON u.id_roles = r.id_roles');
             $req->execute();
-            $data = $req->fetchAll(PDO::FETCH_ASSOC);
+            $data = $req->fetch(PDO::FETCH_ASSOC);
             return $data;
         } catch(EXCEPTION $error){
             return $error->getMessage();

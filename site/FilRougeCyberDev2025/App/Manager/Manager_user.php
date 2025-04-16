@@ -7,7 +7,7 @@ class ManagerUser extends ModelUser{
                                                     FROM users u 
                                                     JOIN roles r ON u.id_roles = r.id_roles');
             $req->execute();
-            $data = $req->fetch(PDO::FETCH_ASSOC);
+            $data = $req->fetchAll(PDO::FETCH_ASSOC);
             return $data;
         } catch(EXCEPTION $error){
             return $error->getMessage();
@@ -17,13 +17,13 @@ class ManagerUser extends ModelUser{
     function readUserByMail():array |string{
         try{
             $req = $this->getBdd()->prepare('SELECT u.id, u.pseudo, u.mdp, u.email, u.id_roles, r.nom_role 
-                                           FROM users u 
-                                           JOIN roles r ON u.id_roles = r.id_roles
-                                           WHERE u.email = ? LIMIT 1');
+                                                    FROM users u 
+                                                    JOIN roles r ON u.id_roles = r.id_roles
+                                                    WHERE u.email = ? LIMIT 1');
             $email = $this->getEmail();
             $req->bindParam(1,$email,PDO::PARAM_STR);
             $req->execute();
-            $data = $req->fetchAll();
+            $data = $req->fetch(PDO::FETCH_ASSOC);
             return $data;
         }catch(EXCEPTION $error){
             return $error->getMessage();
